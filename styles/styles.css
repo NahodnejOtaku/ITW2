@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 100px 0 0 0;
+}
+
+body.scrolled {
+    padding: 40px 0 0 0;
+}
+
+/* TEMP */
+img {height: 100px;}
+
+.content {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #009ac5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a#title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 24px;
+    transition: all 0.6s;
+}
+
+body.scrolled a#title {
+    font-size: 16px;
+}
+
+header img {
+    height: 100px;
+    transition: all 0.6s;
+}
+
+body.scrolled header img {
+    height: 50px;
+}
+
+header h1 {
+    padding: 0 15px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    height: 50px;
+    padding: 0 10px;
+    margin: 0 5px;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+}
+
+nav li:hover {
+    background-color: #0051ff;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 660px) {
+    nav {
+        height: 100px;
+        align-content: center;
+    }
+
+    body.scrolled nav {
+        height: 50px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav::before {
+        content: "AAA";
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    nav:hover::before {
+        background-color: #0051ff;
+    }
+
+    nav:hover ul {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        top: 100px;
+        left: 0;
+        transition: all 0.6s;
+    }
+
+    body.scrolled nav:hover ul {
+        top: 50px;
+    }
+
+    nav:hover a {
+        color: #009ac5;
+    }
+
+    nav:hover li:hover a {
+        color: aliceblue;
+    }
+}
