@@ -369,14 +369,9 @@ footer>div {
     position: fixed;
     left: calc(50vw - 100px);
     top: 1vh;
-    transition: all 1s;
-}
-
-#forgiveness.popup {
-    top: 10vh;
+    transition: top 1s, visibility 0.5s;
     width: 200px;
     height: 100px;
-    z-index: 3;
     background-color: var(--ternary);
     border: 2px solid;
     border-radius: 20px;
@@ -384,6 +379,11 @@ footer>div {
     padding: 10px;
     box-sizing: border-box;
     align-content: center;
+}
+
+#forgiveness.popup {
+    top: 10vh;
+    z-index: 3;
 }
 
 /* Navbar and grid shortening */
