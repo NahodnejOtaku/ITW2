@@ -100,7 +100,10 @@ nav a {
     }
 
     nav::before {
-        content: "AAA";
+        font-family: 'Material Symbols Outlined';
+        font-size: 24px;
+        color: aliceblue;
+        content: "\e5d2";
         padding: 10px;
         border-radius: 10px;
     }
