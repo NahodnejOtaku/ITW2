@@ -8,7 +8,7 @@
 html {
     scroll-padding-top: 70px;
     scroll-behavior: smooth;
-} 
+}
 
 body {
     padding: 20px;
@@ -24,7 +24,9 @@ h2 {
 }
 
 /* TEMP */
-img {height: 100px;}
+img {
+    height: 100px;
+}
 
 .content {
     max-width: 1200px;
@@ -32,8 +34,12 @@ img {height: 100px;}
     margin: 0 auto;
 }
 
+.none {
+    visibility: hidden;
+}
+
 header {
-    z-index: 1;
+    z-index: 2;
     border-bottom: solid 1px;
     background-color: var(--primary);
     position: fixed;
@@ -108,7 +114,7 @@ nav a {
     align-content: center;
 }
 
-#about {
+section:nth-of-type(2n + 1) {
     background-color: #cdc4ad;
     border-radius: 30px;
     padding: 10px;
@@ -127,6 +133,11 @@ nav a {
     margin: 0 20px;
 }
 
+#skills {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 #cards {
     display: flex;
     flex-wrap: wrap;
@@ -134,7 +145,7 @@ nav a {
     flex-direction: row;
 }
 
-#cards > div {
+#cards>div {
     width: 250px;
     height: 350px;
     margin: 20px;
@@ -168,7 +179,7 @@ nav a {
     backface-visibility: hidden;
 }
 
-#cards div.card > ul {
+#cards div.card>ul {
     transition: all 1s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -178,15 +189,15 @@ nav a {
     font-size: 18px;
 }
 
-#cards div.card > ul > li:hover {
+#cards div.card>ul>li:hover {
     color: var(--glowing);
 }
 
-#cards div.card > ul > li > ul {
-    display: none;  
+#cards div.card>ul>li>ul {
+    display: none;
 }
 
-#cards div:hover div.card > ul > li:hover > ul {
+#cards div:hover div.card>ul>li:hover>ul {
     display: block;
     list-style: none;
     padding: 0;
@@ -217,7 +228,165 @@ nav a {
     background-blend-mode: multiply;
 }
 
-/* Navbar shortening */
+#hobbies {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
+#hobbies h2 {
+    display: grid;
+    grid-column: 1 / 6;
+}
+
+#hobbies>div {
+    position: relative;
+    background-color: black;
+}
+
+#hobbies>div>h3 {
+    z-index: 1;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    font-size: 22px;
+    text-align: center;
+    margin: 10px auto;
+    width: 100%;
+    text-shadow: 0px 0px 6px black;
+}
+
+#hobbies>div>img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    opacity: 0.7;
+}
+
+#drinking,
+#drinking img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#tricks,
+#tricks img {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#confession {
+    background-color: #22214f;
+    background-image: url(../img/zpoved.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#confession h2 {
+    padding-top: 20px;
+    color: var(--ternary);
+}
+
+#confession form {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#confession form textarea {
+    height: 500px;
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--primary);
+    opacity: 0.8;
+    color: white;
+    font-size: 16px;
+    border: solid 5px var(--secondary);
+    padding: 10px;
+}
+
+#confession form input {
+    background-color: gray;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 0;
+    color: var(--ternary);
+    font-size: 22px;
+}
+
+#confession form:valid input {
+    background-color: var(--primary);
+    box-shadow: 0 0 7px 1px white;
+}
+
+#confession form:valid input:hover {
+    background-color: var(--secondary);
+}
+
+footer {
+    background-color: white;
+    border-top: solid 1px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer>div {
+    width: 200px;
+    margin: 5px;
+}
+
+#donate {
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 20px;
+}
+
+#donate:hover {
+    background-color: var(--secondary);
+}
+
+#donate a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+#author {
+    text-align: right;
+}
+
+#forgiveness {
+    position: fixed;
+    left: calc(50vw - 100px);
+    top: 1vh;
+    transition: all 1s;
+}
+
+#forgiveness.popup {
+    top: 10vh;
+    width: 200px;
+    height: 100px;
+    z-index: 3;
+    background-color: var(--ternary);
+    border: 2px solid;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+/* Navbar and grid shortening */
 @media screen and (max-width: 640px) {
     nav {
         height: 100px;
@@ -267,6 +436,50 @@ nav a {
     nav:hover li:hover a {
         color: var(--ternary);
     }
+
+    #hobbies {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    #hobbies h2 {
+        grid-column: 1 / 4;
+    }
+
+    #hobbies :last-child {
+        grid-column: 3;
+    }
+
+    #drinking,
+    #drinking img {
+        border-bottom-left-radius: 0px;
+    }
+
+    #collecting,
+    #collecting img {
+        border-bottom-left-radius: 20px;
+    }
+
+    #teaing,
+    #teaing img {
+        border-top-right-radius: 20px;
+    }
+
+    #tricks,
+    #tricks img {
+        border-top-right-radius: 0px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    #motto {
+        text-align: center;
+    }
+
+    #author {
+        text-align: center;
+    }
 }
 
 /* Mobile layout */
@@ -275,5 +488,57 @@ nav a {
         float: none;
         width: calc(100% - 40px);
         height: auto;
+    }
+
+    #hobbies {
+        grid-template-columns: 100%;
+    }
+
+    #hobbies h2 {
+        grid-column: 1 / 2;
+    }
+
+    #drinking {
+        grid-row: 2;
+    }
+
+    #couching {
+        grid-row: 3;
+    }
+
+    #teaing {
+        grid-row: 4;
+    }
+
+    #collecting {
+        grid-row: 5;
+    }
+
+    #tricks {
+        grid-row: 6;
+    }
+
+    #hobbies :last-child {
+        grid-column: 1;
+    }
+
+    #drinking,
+    #drinking img {
+        border-top-right-radius: 20px;
+    }
+
+    #collecting,
+    #collecting img {
+        border-bottom-left-radius: 0px;
+    }
+
+    #teaing,
+    #teaing img {
+        border-top-right-radius: 0px;
+    }
+
+    #tricks,
+    #tricks img {
+        border-bottom-left-radius: 20px;
     }
 }

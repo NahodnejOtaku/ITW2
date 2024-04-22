@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./styles/styles.css" type="text/css">
-    <script src="./js/scroll.js" type="text/javascript"></script>
+    <script src="./js/onload.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -122,61 +122,63 @@
         </div>
     </section>
 
-    <section id="hobbies">
+    <section id="hobbies" class="content">
         <h2>Koníčky</h2>
         <div id="drinking">
             <h3>
                 Chlastání
             </h3>
-            <img src="./img/missing.jpeg">
+            <img alt="Já když chlastám" src="./img/aquadrinking.jpg">
         </div>
         <div id="couching">
             <h3>
                 Vylehávání na gauči
             </h3>
-            <img src="./img/missing.jpeg">
+            <img alt="Já na gauči" src="./img/aquaonsofa.jpg">
         </div>
         <div id="teaing">
             <h3>
                 Popíjení čaje
             </h3>
-            <img src="./img/missing.jpeg">
+            <img alt="Já když piju čaj" src="./img/aquawithtea.png">
         </div>
         <div id="collecting">
             <h3>
                 Sbírání kamenů
             </h3>
-            <img src="./img/missing.jpeg">
+            <img alt="Pěkné šutříky" src="./img/marbles.jpg">
         </div>
         <div id="tricks">
             <h3>
                 Párty triky
             </h3>
-            <img src="./img/missing.jpeg">
+            <img alt="Párty trik!" src="./img/partytrick.jpg">
         </div>
     </section>
 
-    <section id="confession">
+    <section id="confession" class="content">
         <h2>Zpověď</h2>
-        <form>
-            <label for="confession_area">Zpověď</label>
-            <textarea id="confession_area" name="confession_area" required></textarea>
+        <form id="confession_form">
+            <textarea id="confession_area" name="confession_area" placeholder="Vaši zpověď napište sem..." required></textarea>
             <input type="submit" value="Eris pads her chest">
         </form>
     </section>
 
+    <div id="forgiveness" class="none">
+        <span>
+            Vaše hříchy vám budou odpuštěny.
+        </span>
+    </div>
+
     <footer>
-        <div>
-            Eris pads her chest.
+        <div id="motto">
+            エリスの胸はパッド入り。
         </div>
-        <div>
+        <div id="donate">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Donate</a>
         </div>
-        <div>
-            xcerna11
-        </div>
-        <div>
-            2024
+        <div id="author">
+            xcerna11, 2024
         </div>
     </footer>
 </body>
