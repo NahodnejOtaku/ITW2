@@ -96,18 +96,34 @@ nav a {
     font-size: 20px;
 }
 
-section#about {
+#about {
     background-color: #cdc4ad;
     border-radius: 30px;
     padding: 10px;
     margin-bottom: 20px;
+    border: solid 2px;
 }
 
-section#about img {
+#about h2 {
+    margin: 20px;
+    font-size: 32px;
+    font-family: 'Arial';
+    border-bottom: solid 1px;
+}
+
+#about img {
+    height: 200px;
+    margin: 20px;
     float: right;
+    border: black solid 1px;
 }
 
-@media screen and (max-width: 660px) {
+#about div {
+    margin: 0 20px;
+}
+
+/* Navbar shortening */
+@media screen and (max-width: 640px) {
     nav {
         height: 100px;
         align-content: center;
@@ -155,5 +171,14 @@ section#about img {
 
     nav:hover li:hover a {
         color: var(--ternary);
+    }
+}
+
+/* Mobile layout */
+@media screen and (max-width: 480px) {
+    #about img {
+        float: none;
+        width: calc(100% - 40px);
+        height: auto;
     }
 }
