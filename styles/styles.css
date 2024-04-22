@@ -2,6 +2,7 @@
     --primary: #009ac5;
     --secondary: #0051ff;
     --ternary: #d8edff;
+    --glowing: #edff00;
 }
 
 html {
@@ -27,6 +28,8 @@ img {height: 100px;}
 }
 
 header {
+    z-index: 1;
+    border-bottom: solid 1px;
     background-color: var(--primary);
     position: fixed;
     top: 0;
@@ -124,6 +127,96 @@ nav a {
 
 #about div {
     margin: 0 20px;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#cards > div {
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card {
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--ternary);
+    perspective: 1000px;
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+
+#cards div:hover div.card {
+    background-color: var(--secondary);
+    transform: rotateY(180deg);
+}
+
+#cards div.card h3 {
+    font-size: 32px;
+    position: absolute;
+    width: 100%;
+    top: 125px;
+    transition: all 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#cards div.card > ul {
+    transition: all 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+#cards div.card > ul > li:hover {
+    color: var(--glowing);
+}
+
+#cards div.card > ul > li > ul {
+    display: none;  
+}
+
+#cards div:hover div.card > ul > li:hover > ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    color: black
+}
+
+#holy_magic .card {
+    background-image: url(../img/Aura-PNG-Photo.png);
+    background-blend-mode: lighten;
+}
+
+#water_magic .card {
+    background-image: url(../img/iiB5V1-water-drop-clipart-hd.png);
+    background-blend-mode: multiply;
+}
+
+#party_tricks .card {
+    background-image: url(../img/champagne.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position-x: 50px;
+    background-position-y: 30px;
+    background-repeat: no-repeat;
+}
+
+#special_abilities .card {
+    background-image: url(../img/toad.png);
+    background-blend-mode: multiply;
 }
 
 /* Navbar shortening */
