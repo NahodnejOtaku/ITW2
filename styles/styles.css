@@ -16,7 +16,12 @@ body {
     background-color: var(--ternary);
 }
 
-
+h2 {
+    margin: 20px;
+    font-size: 32px;
+    font-family: 'Arial';
+    border-bottom: solid 1px;
+}
 
 /* TEMP */
 img {height: 100px;}
@@ -107,15 +112,8 @@ nav a {
     background-color: #cdc4ad;
     border-radius: 30px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border: solid 2px;
-}
-
-#about h2 {
-    margin: 20px;
-    font-size: 32px;
-    font-family: 'Arial';
-    border-bottom: solid 1px;
 }
 
 #about img {
