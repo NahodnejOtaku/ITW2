@@ -23,11 +23,6 @@ h2 {
     border-bottom: solid 1px;
 }
 
-/* TEMP */
-img {
-    height: 100px;
-}
-
 .content {
     max-width: 1200px;
     padding: 0 20px;
@@ -38,6 +33,7 @@ img {
     visibility: hidden;
 }
 
+/* Záhlaví */
 header {
     z-index: 3;
     border-bottom: solid 1px;
@@ -55,6 +51,7 @@ header div {
     align-items: center;
 }
 
+/* Logo a název + zmenšení při scrollování*/
 a#title {
     display: flex;
     flex-direction: row;
@@ -83,6 +80,7 @@ header h1 {
     margin: 0;
 }
 
+/* Navigace */
 nav ul {
     display: flex;
     flex-direction: row;
@@ -114,6 +112,7 @@ nav a {
     align-content: center;
 }
 
+/* Každá lichá sekce bude mít hnědé pozadí s okrajem */
 section:nth-of-type(2n + 1) {
     background-color: #cdc4ad;
     border-radius: 30px;
@@ -122,6 +121,7 @@ section:nth-of-type(2n + 1) {
     border: solid 2px;
 }
 
+/* O mně */
 #about img {
     height: 200px;
     margin: 20px;
@@ -133,11 +133,13 @@ section:nth-of-type(2n + 1) {
     margin: 0 20px;
 }
 
+/* Schopnosti */
 #skills {
     text-align: center;
     margin-bottom: 40px;
 }
 
+/* Nastavení otáčení karet */
 #cards {
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +195,7 @@ section:nth-of-type(2n + 1) {
     color: var(--glowing);
 }
 
+/* Schování a ukázaní listu druhé úrovně */
 #cards div.card>ul>li>ul {
     display: none;
 }
@@ -204,6 +207,7 @@ section:nth-of-type(2n + 1) {
     color: black
 }
 
+/* Specifická pozadí pro jednotlivé karty */
 #holy_magic .card {
     background-image: url(../img/Aura-PNG-Photo.png);
     background-blend-mode: lighten;
@@ -228,6 +232,7 @@ section:nth-of-type(2n + 1) {
     background-blend-mode: multiply;
 }
 
+/* Zájmy */
 #hobbies {
     display: grid;
     grid-template-columns: repeat(5, 20%);
@@ -244,6 +249,7 @@ section:nth-of-type(2n + 1) {
     aspect-ratio: 1 / 1;
 }
 
+/* Popisek */
 #hobbies>div>h3 {
     z-index: 2;
     position: absolute;
@@ -256,6 +262,7 @@ section:nth-of-type(2n + 1) {
     text-shadow: 0px 0px 6px black;
 }
 
+/* Obrázek + GIF */
 #hobbies>div>img {
     position: absolute;
     width: 100%;
@@ -266,6 +273,7 @@ section:nth-of-type(2n + 1) {
     color: white;
 }
 
+/* Zobrazování GIFů */
 #hobbies>div>img:first-of-type {
     opacity: 0;
 }
@@ -283,6 +291,7 @@ section:nth-of-type(2n + 1) {
     opacity: 0;
 }
 
+/* Zaoblení vnějších rohů krajních obrázků a GIFů */
 #drinking,
 #drinking img {
     border-top-left-radius: 20px;
@@ -295,6 +304,7 @@ section:nth-of-type(2n + 1) {
     border-bottom-right-radius: 20px;
 }
 
+/* Zpověď */
 #confession {
     background-color: #22214f;
     background-image: url(../img/zpoved.png);
@@ -310,6 +320,7 @@ section:nth-of-type(2n + 1) {
     color: var(--ternary);
 }
 
+/* Zpovědní formulář */
 #confession form {
     height: 600px;
     display: flex;
@@ -339,6 +350,7 @@ section:nth-of-type(2n + 1) {
     font-size: 22px;
 }
 
+/* Zvýraznění odeslání na základě validity a přejetí myší */
 #confession form:valid input {
     background-color: var(--primary);
     box-shadow: 0 0 7px 1px white;
@@ -348,6 +360,7 @@ section:nth-of-type(2n + 1) {
     background-color: var(--secondary);
 }
 
+/* Zápatí */
 footer {
     background-color: white;
     border-top: solid 1px;
@@ -365,6 +378,7 @@ footer>div {
     margin: 5px;
 }
 
+/* Tlačítko donate */
 #donate {
     text-align: center;
     background-color: var(--primary);
@@ -382,10 +396,12 @@ footer>div {
     width: 100%;
 }
 
+/* Autor v zápatí */
 #author {
     text-align: right;
 }
 
+/* Popup s odpuštěním */
 #forgiveness {
     position: fixed;
     left: calc(50vw - 100px);
@@ -407,6 +423,7 @@ footer>div {
     z-index: 4;
 }
 
+/* Šipeška */
 #arrow {
     display: none;
 }
@@ -438,8 +455,9 @@ footer>div {
     align-content: center;
 }
 
-/* Navbar and grid shortening */
+/* Zmenšení navigace a gridu */
 @media screen and (max-width: 640px) {
+    /* Zmenšení navigace */
     nav {
         height: 100px;
         align-content: center;
@@ -449,10 +467,12 @@ footer>div {
         height: 50px;
     }
 
+    /* Zmizení menu */
     nav ul {
         display: none;
     }
 
+    /* Vytvoření menu tlačítka */
     nav::before {
         font-family: 'Material Symbols Outlined';
         font-size: 38px;
@@ -466,6 +486,7 @@ footer>div {
         background-color: var(--secondary);
     }
 
+    /* Přesunutí a zobrazení menu */
     nav:hover ul {
         background-color: var(--ternary);
         display: flex;
@@ -477,10 +498,12 @@ footer>div {
         transition: all 0.6s;
     }
 
+    /* Posunutí menu podle scrollu */
     body.scrolled nav:hover ul {
         top: 50px;
     }
 
+    /* Změna barev */
     nav:hover a {
         color: var(--primary);
     }
@@ -489,6 +512,7 @@ footer>div {
         color: var(--ternary);
     }
 
+    /* Změna rozložení koníčků */
     #hobbies {
         grid-template-columns: repeat(3, auto);
     }
@@ -501,6 +525,7 @@ footer>div {
         grid-column: 3;
     }
 
+    /* Změna zaoblených okrajů podle nového rozložení */
     #drinking,
     #drinking img {
         border-bottom-left-radius: 0px;
@@ -521,6 +546,7 @@ footer>div {
         border-top-right-radius: 0px;
     }
 
+    /* Změna zápatí na sloupec */
     footer {
         flex-direction: column;
     }
@@ -536,16 +562,19 @@ footer>div {
 
 /* Mobile layout */
 @media screen and (max-width: 480px) {
+    /* Změna pozice obrázku u o mně */
     #about img {
         float: none;
         width: calc(100% - 40px);
         height: auto;
     }
 
+    /* Změna rozložení koníčků */
     #hobbies {
         grid-template-columns: 100%;
     }
 
+    /* Ukočírování koníčků do sloupce */
     #hobbies h2 {
         grid-column: 1 / 2;
     }
@@ -574,6 +603,7 @@ footer>div {
         grid-column: 1;
     }
 
+    /* Změna zaoblených rohů */
     #drinking,
     #drinking img {
         border-top-right-radius: 20px;
